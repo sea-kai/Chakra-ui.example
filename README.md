@@ -1,2 +1,6 @@
 # UserManagementApp by Chakra-UI
-Created with CodeSandbox
+ユーザー管理アプリ
+
+# 主なライブラリ
+・React.js
+・Chakra UI
