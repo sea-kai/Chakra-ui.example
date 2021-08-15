@@ -3,9 +3,6 @@
 import { memo, useCallback, useEffect, VFC } from "react";
 import {
   Center,
-  Modal,
-  ModalOverlay,
-  ModalContent,
   Spinner,
   Wrap,
   WrapItem,
@@ -14,6 +11,7 @@ import {
 
 import { UserCard } from "../organisms/user/UserCard";
 import { useAllUsers } from "../../hooks/useAllUsers";
+import { UserDetailModal } from "../organisms/user/UserDetailModal";
 
 export const UserManagement: VFC = memo(() => {
   const { getUsers, users, loading } = useAllUsers();
@@ -42,12 +40,7 @@ export const UserManagement: VFC = memo(() => {
           ))}
         </Wrap>
       )}
-      <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent>
-          <p>テスト</p>
-        </ModalContent>
-      </Modal>
+      <UserDetailModal isOpen={isOpen} onClose={onClose} />
     </>
   );
 });
